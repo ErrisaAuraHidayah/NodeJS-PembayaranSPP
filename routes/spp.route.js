@@ -4,6 +4,8 @@ const express = require('express')
 const sppController = require('../controllers/spp.controller')
 const router = new express.Router();
 
+const {checkToken} = require('../auth/tokenAdmin')
+
 router.get("/tampil", sppController.tampil)
 router.post("/tambah", sppController.tambah)
 router.put("/update/:id_spp", sppController.update)
